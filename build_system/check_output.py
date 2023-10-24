@@ -19,5 +19,6 @@ SmartX ProPhone 有一个 6.1 英寸的显示屏，128GB 存储、\
 response = openai.Moderation.create(
     input=final_response_to_customer
 )
-moderation_output = response["results"][0]
-print(moderation_output)
+#moderation_output = response["results"][0]
+#print(moderation_output)
+print(response)

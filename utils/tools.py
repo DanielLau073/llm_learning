@@ -69,3 +69,12 @@ def get_completion_and_token_count(messages,
     return content, token_dict
 
 
+class Timer:
+    def __enter__(self):
+        self.start = time.time()
+        return self
+
+    def __exit__(self, *args):
+        self.end = time.time()
+        self.interval = self.end - self.start
+        print(f"Elapsed time: {self.interval:.4f} seconds")
